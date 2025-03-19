@@ -1,3 +1,6 @@
+from locations.entrance import entrance 
+from locations.hallway import hallway
+
 welcome_message = """Welcome to CODE World Campus!
 
 You can navigate with directions such as 'east'.
@@ -8,26 +11,8 @@ You can exit the game with 'exit'.
 """
 
 locations = {
-  "entrance": {
-    "look": {
-      "output": "You are in the entrance area. Behind you is a broken elevator. In front of you a leather couch. The hallway continues to the [east].",
-      "next_location_id": None
-    },
-    "east": {
-      "output": "You go east.",
-      "next_location_id": "hallway1"
-    },
-  },
-  "hallway1": {
-    "look": {
-      "output": "You are in a hallway with a table. The table has a bowl of apples on it. Maybe you can [take] one? The way returns [west].",
-      "next_location_id": None
-    },
-    "west": {
-      "output": "You go west.",
-      "next_location_id": "entrance"
-    },
-  }
+  "entrance": entrance,
+  "hallway1": hallway
 }
 
 current_location = locations["entrance"]
@@ -53,3 +38,4 @@ while True:
     
   else:
     print("Please enter a valid command.")
+
