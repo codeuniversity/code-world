@@ -24,6 +24,10 @@ hallway = {
     "output": west,
     "next_location_id": "entrance"
   },
+  "east": {
+    "output": lambda: "You continue east",
+    "next_location_id": "hall"
+  },
   "take": {
     "output": take,
     "next_location_id": None
